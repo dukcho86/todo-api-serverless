@@ -90,23 +90,26 @@
             "package": "dist/apps/1-tech-arch/myapi"
           }
         },
+        "sls": {
+          "executor": "@flowaccount/nx-serverless:sls",
+          "options": {
+            "buildTarget": "1-tech-arch-myapi:build:production",
+            "config": "apps/1-tech-arch/myapi/serverless.yml",
+            "location": "dist/apps/1-tech-arch/myapi",
+            "package": "dist/apps/1-tech-arch/myapi",
+            "stage": "dev"
+          }
+        },
         "lint": {
           "executor": "@angular-devkit/build-angular:tslint",
           "options": {
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/1-tech-arch/myapi/**/*"
-            ],
-            "tsConfig": [
-              "apps/1-tech-arch/myapi/tsconfig.spec.json"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/1-tech-arch/myapi/**/*"],
+            "tsConfig": ["apps/1-tech-arch/myapi/tsconfig.spec.json"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/1-tech-arch/myapi"
-          ],
+          "outputs": ["coverage/apps/1-tech-arch/myapi"],
           "options": {
             "jestConfig": "apps/1-tech-arch/myapi/jest.config.js",
             "passWithNoTests": true
