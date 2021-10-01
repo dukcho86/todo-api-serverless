@@ -19,7 +19,6 @@ provider:
   environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
     TODOS_TABLE: Todos-${self:provider.stage}
-    # TODOS_TABLE: ${self:provider.stage}
 
 custom:
   webpack:
@@ -47,13 +46,6 @@ functions:
         Action:
           - dynamodb:PutItem
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
-
-  # hello-world:
-  #   handler: src/handler.helloWorld
-  #   events:
-  #     - http:
-  #         path: hello-world
-  #         method: get
 
 resources: # CloudFormation template syntax
   Resources:
