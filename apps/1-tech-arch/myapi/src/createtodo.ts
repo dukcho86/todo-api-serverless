@@ -50,14 +50,3 @@ function createDynamoDBClient() {
 
   return new AWS.DynamoDB.DocumentClient();
 }
-
-// "sls": {
-//         "executor": "@flowaccount/nx-serverless:sls",
-//         "options": {
-//           "buildTarget": "1-tech-arch-myapi:build:production",
-//           "config": "apps/1-tech-arch/myapi/serverless.yml",
-//           "location": "dist/apps/1-tech-arch/myapi",
-//           "package": "dist/apps/1-tech-arch/myapi",
-//           "stage": "dev"
-//         }
-//       },
