@@ -14,17 +14,15 @@ package:
 provider:
   name: aws
   runtime: nodejs12.x
-  region: us-east-2
+  region: ${opt:region, 'us-east-2'}
   stage: ${opt:stage, 'dev'}
 
   environment:
-    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+    # AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
     TODOS_TABLE: Todos-${self:provider.stage}
+    IS_OFFLINE: ${env.IS_OFFLINE}
 
 custom:
-  webpack:
-    webpackConfig: ./webpack.config.js
-    includeModules: true
   serverless-offline:
     httpPort: 3003
   dynamodb:
@@ -32,6 +30,13 @@ custom:
       port: 8000
       inMemory: true
       migrate: true
+      seed: true
+      noStart: true
+    seed:
+      groups:
+        sources:
+          - table: ${self:provider.environment.TODOS_TABLE}
+            sources: [./seeds/todos.json]
     stages:
       - dev
 
@@ -42,6 +47,7 @@ functions:
       - http:
           method: post
           path: todos
+          cors: true
     iamRoleStatements:
       - Effect: Allow
         Action:

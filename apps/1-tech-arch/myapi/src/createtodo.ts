@@ -1,15 +1,8 @@
-export interface TodoItem {
-  id: string;
-  name: string;
-  done: boolean;
-  createdAt: string;
-}
-
 import * as AWS from 'aws-sdk';
 import 'source-map-support/register';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import * as uuid from 'uuid';
-// import { TodoItem } from '../../models/TodoItem';
+import { TodoItem } from './TodoItem';
 
 export const handler = async (
   event: APIGatewayProxyEvent
@@ -24,7 +17,8 @@ export const handler = async (
     name,
   };
 
-  const docClient = new AWS.DynamoDB.DocumentClient();
+  // const docClient = new AWS.DynamoDB.DocumentClient();
+  const docClient = createDynamoDBClient();
   await docClient
     .put({
       TableName: process.env.TODOS_TABLE,
@@ -42,6 +36,7 @@ export const handler = async (
 
 function createDynamoDBClient() {
   if (process.env.IS_OFFLINE) {
+    console.log('OFFLINE DB STARTING');
     return new AWS.DynamoDB.DocumentClient({
       region: 'localhost',
       endpoint: 'http://localhost:8000',
