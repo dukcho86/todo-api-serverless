@@ -179,7 +179,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/one-tech-arch-myapi/dev/1633446501494-2021-10-05T15:08:21.494Z/createTodo.zip"
+          "S3Key": "serverless/one-tech-arch-myapi/dev/1633453008320-2021-10-05T16:56:48.320Z/createTodo.zip"
         },
         "Handler": "src/lambda/createTodo.handler",
         "Runtime": "nodejs12.x",
@@ -211,7 +211,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/one-tech-arch-myapi/dev/1633446501494-2021-10-05T15:08:21.494Z/GetTodos.zip"
+          "S3Key": "serverless/one-tech-arch-myapi/dev/1633453008320-2021-10-05T16:56:48.320Z/GetTodos.zip"
         },
         "Handler": "src/lambda/getTodos.handler",
         "Runtime": "nodejs12.x",
@@ -243,7 +243,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/one-tech-arch-myapi/dev/1633446501494-2021-10-05T15:08:21.494Z/UpdateTodo.zip"
+          "S3Key": "serverless/one-tech-arch-myapi/dev/1633453008320-2021-10-05T16:56:48.320Z/UpdateTodo.zip"
         },
         "Handler": "src/lambda/updateTodo.handler",
         "Runtime": "nodejs12.x",
@@ -275,7 +275,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/one-tech-arch-myapi/dev/1633446501494-2021-10-05T15:08:21.494Z/DeleteTodo.zip"
+          "S3Key": "serverless/one-tech-arch-myapi/dev/1633453008320-2021-10-05T16:56:48.320Z/DeleteTodo.zip"
         },
         "Handler": "src/lambda/deleteTodo.handler",
         "Runtime": "nodejs12.x",
@@ -300,44 +300,44 @@
         "DeleteTodoLogGroup"
       ]
     },
-    "CreateTodoLambdaVersionMxrGOP0JoEodA6LvJuJJKsrd3X0Z1x1kQfi0Lok3KBc": {
+    "CreateTodoLambdaVersionssrzwksdHuTFVbspBAem3Ur23bcZF2kx1noqWgd1I": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateTodoLambdaFunction"
         },
-        "CodeSha256": "CW1HhBWPvkXbXfUQ5vD3UHYWTGEgZs1U0jXczd1FFbM="
+        "CodeSha256": "Opqh9klQ7Sh7JFSNisrArWV13L5K6r702gZXSd2iDCI="
       }
     },
-    "GetTodosLambdaVersion2s4aPwvs2dUqbD3XrjSepfHl9LiG2F6LCfHw0l6qfA": {
+    "GetTodosLambdaVersionUwpYNC9v6DZGbOa8gUsQigxFez0JicV5Ykv0ASLVTk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetTodosLambdaFunction"
         },
-        "CodeSha256": "CW1HhBWPvkXbXfUQ5vD3UHYWTGEgZs1U0jXczd1FFbM="
+        "CodeSha256": "Opqh9klQ7Sh7JFSNisrArWV13L5K6r702gZXSd2iDCI="
       }
     },
-    "DeleteTodoLambdaVersionrRsUTaVEou1Q0r0QFhfmKTQGErBkcbWtD9f44n5ZKU": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "DeleteTodoLambdaFunction"
-        },
-        "CodeSha256": "CW1HhBWPvkXbXfUQ5vD3UHYWTGEgZs1U0jXczd1FFbM="
-      }
-    },
-    "UpdateTodoLambdaVersion3RWcJMDWYxashJLf1CC2Yo5ooI8E1Jao0fgX4AhVG4": {
+    "UpdateTodoLambdaVersionu2jzq51KwJOfP7Zc7QfnEVq9ROOc3vPL5wQPpcMmu4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateTodoLambdaFunction"
         },
-        "CodeSha256": "CW1HhBWPvkXbXfUQ5vD3UHYWTGEgZs1U0jXczd1FFbM="
+        "CodeSha256": "Opqh9klQ7Sh7JFSNisrArWV13L5K6r702gZXSd2iDCI="
+      }
+    },
+    "DeleteTodoLambdaVersionJenKAdg9ShphGjQU7rvH3qLV9K4vzUTYvVEvOhiohY": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DeleteTodoLambdaFunction"
+        },
+        "CodeSha256": "Opqh9klQ7Sh7JFSNisrArWV13L5K6r702gZXSd2iDCI="
       }
     },
     "ApiGatewayRestApi": {
@@ -608,7 +608,7 @@
         "DeleteTodoLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1633446497794": {
+    "ApiGatewayDeployment1633453007119": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1111,7 +1111,7 @@
     "CreateTodoLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateTodoLambdaVersionMxrGOP0JoEodA6LvJuJJKsrd3X0Z1x1kQfi0Lok3KBc"
+        "Ref": "CreateTodoLambdaVersionssrzwksdHuTFVbspBAem3Ur23bcZF2kx1noqWgd1I"
       },
       "Export": {
         "Name": "sls-one-tech-arch-myapi-dev-CreateTodoLambdaFunctionQualifiedArn"
@@ -1120,28 +1120,28 @@
     "GetTodosLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetTodosLambdaVersion2s4aPwvs2dUqbD3XrjSepfHl9LiG2F6LCfHw0l6qfA"
+        "Ref": "GetTodosLambdaVersionUwpYNC9v6DZGbOa8gUsQigxFez0JicV5Ykv0ASLVTk"
       },
       "Export": {
         "Name": "sls-one-tech-arch-myapi-dev-GetTodosLambdaFunctionQualifiedArn"
       }
     },
-    "DeleteTodoLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "DeleteTodoLambdaVersionrRsUTaVEou1Q0r0QFhfmKTQGErBkcbWtD9f44n5ZKU"
-      },
-      "Export": {
-        "Name": "sls-one-tech-arch-myapi-dev-DeleteTodoLambdaFunctionQualifiedArn"
-      }
-    },
     "UpdateTodoLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateTodoLambdaVersion3RWcJMDWYxashJLf1CC2Yo5ooI8E1Jao0fgX4AhVG4"
+        "Ref": "UpdateTodoLambdaVersionu2jzq51KwJOfP7Zc7QfnEVq9ROOc3vPL5wQPpcMmu4"
       },
       "Export": {
         "Name": "sls-one-tech-arch-myapi-dev-UpdateTodoLambdaFunctionQualifiedArn"
+      }
+    },
+    "DeleteTodoLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "DeleteTodoLambdaVersionJenKAdg9ShphGjQU7rvH3qLV9K4vzUTYvVEvOhiohY"
+      },
+      "Export": {
+        "Name": "sls-one-tech-arch-myapi-dev-DeleteTodoLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
