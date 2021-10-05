@@ -1,7 +1,7 @@
 import * as AWS from 'aws-sdk';
 import { DocumentClient } from 'aws-sdk/clients/dynamodb';
 
-import { TodoItem } from '../TodoItem';
+import { TodoItem } from '../models/TodoItem';
 
 export default class TodoRepository {
   constructor(

@@ -1,7 +1,7 @@
 import * as uuid from 'uuid';
 
 import TodoRepository from '../repositories/TodoRepository';
-import { TodoItem } from '../TodoItem';
+import { TodoItem } from '../models/TodoItem';
 
 export default class TodoService {
   todoRepository: TodoRepository;
