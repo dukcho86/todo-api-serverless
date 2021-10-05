@@ -1,5 +1,7 @@
 # OneTechArch
 
+Serverless: simple CRUD app on AWS
+
 ## Tech Stack
 
 nx-serverless, aws-lambda
